@@ -1,3 +1,8 @@
+package game;
+
+import engine.graphics.*;
+import engine.util.*;
+
 public class Game {
     private Mesh zedTest;
     private Rectangle rect;
@@ -15,7 +20,7 @@ public class Game {
             new Vector3f(0, 1f, 0f), 0.8f), new Attenuation(0, 0, 0.1f),
             new Vector3f(-2, 0, 5f), 30), new Vector3f(1, 1, 1), 0.7f);
 
-    public Game() {// ResourceLoader.loadMesh("box.obj");
+    public Game() {// engine.util.ResourceLoader.loadMesh("box.obj");
         material = new Material(ResourceLoader.getInstance().loadTexture("test.png"), new Vector3f(1, 1, 1),
                 1, 8);
         zedMat = new Material(ResourceLoader.getInstance().loadTexture("test.png"), new Vector3f(1, 1, 1),

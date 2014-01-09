@@ -1,3 +1,5 @@
+package engine.util;
+
 import org.newdawn.slick.opengl.TextureLoader;
 
 import java.io.BufferedReader;

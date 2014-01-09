@@ -1,3 +1,9 @@
+package engine.graphics;
+
+import engine.util.Input;
+import engine.util.Vector2f;
+import engine.util.Vector3f;
+
 public class Camera {
     public static final Vector3f yAxis = new Vector3f(0, 1, 0);
 
@@ -21,7 +27,7 @@ public class Camera {
     public void input() {
         float sensitivity = 0.5f;
         float movAmt = (float) (10 * Time.getDelta());
-//		float rotAmt = (float)(100 * Time.getDelta());
+//		float rotAmt = (float)(100 * engine.util.Time.getDelta());
 
         if (Input.getKey(Input.KEY_ESCAPE)) {
             Input.setCursor(true);
@@ -61,13 +67,13 @@ public class Camera {
 
         if (Input.getKey(Input.KEY_1))
             System.out.println(pos);
-//		if(Input.getKey(Input.KEY_UP))
+//		if(engine.util.Input.getKey(engine.util.Input.KEY_UP))
 //			rotateX(-rotAmt);
-//		if(Input.getKey(Input.KEY_DOWN))
+//		if(engine.util.Input.getKey(engine.util.Input.KEY_DOWN))
 //			rotateX(rotAmt);
-//		if(Input.getKey(Input.KEY_LEFT))
+//		if(engine.util.Input.getKey(engine.util.Input.KEY_LEFT))
 //			rotateY(-rotAmt);
-//		if(Input.getKey(Input.KEY_RIGHT))
+//		if(engine.util.Input.getKey(engine.util.Input.KEY_RIGHT))
 //			rotateY(rotAmt);
 
         //System.out.println(pos);

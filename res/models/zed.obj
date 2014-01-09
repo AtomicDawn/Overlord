@@ -154,7 +154,7 @@ vt 0.016195 0.573103
 vt 0.016192 0.573103
 vt 0.442153 0.496723
 vt 0.442153 0.343885
-usemtl Material.001
+usemtl engine.graphics.Material.001
 s off
 f 5/1 6/2 2/3 1/4
 f 6/5 7/6 3/7 2/2

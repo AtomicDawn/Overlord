@@ -1,3 +1,8 @@
+package engine.graphics;
+
+import engine.util.Matrix4f;
+import engine.util.Vector3f;
+
 public class PhongShader extends Shader {
     private static final int MAX_POINT_LIGHTS = 4;
     private static final int MAX_SPOT_LIGHTS = 4;

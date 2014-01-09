@@ -1,3 +1,7 @@
+package engine.graphics;
+
+import engine.util.Vector3f;
+
 public class BaseLight {
     private Vector3f color;
     private float intensity;

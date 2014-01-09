@@ -1,3 +1,9 @@
+package engine.graphics;
+
+import engine.util.Matrix4f;
+import engine.util.Util;
+import engine.util.Vector3f;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.HashMap;
@@ -15,7 +21,7 @@ public class Shader {
 
         if (program == 0) {
             System.err
-                    .println("Shader creation failed: Could not find valid memory location in constructor");
+                    .println("engine.graphics.Shader creation failed: Could not find valid memory location in constructor");
             System.exit(1);
         }
     }
@@ -86,7 +92,7 @@ public class Shader {
 
         if (shader == 0) {
             System.err
-                    .println("Shader creation failed: Could not find valid memory location when adding shader");
+                    .println("engine.graphics.Shader creation failed: Could not find valid memory location when adding shader");
             System.exit(1);
         }
 

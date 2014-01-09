@@ -1,3 +1,5 @@
+package engine.graphics;
+
 public class Triangle {
     private Mesh mesh;
 

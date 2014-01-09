@@ -1,3 +1,7 @@
+package engine.graphics;
+
+import engine.util.Vector3f;
+
 public class SpotLight {
     private PointLight pointLight;
     private Vector3f direction;

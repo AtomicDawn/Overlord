@@ -1,3 +1,7 @@
+package engine.graphics;
+
+import engine.util.Vector3f;
+
 public class PointLight {
     private BaseLight baseLight;
     private Attenuation atten;

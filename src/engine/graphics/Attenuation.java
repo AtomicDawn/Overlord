@@ -1,3 +1,5 @@
+package engine.graphics;
+
 public class Attenuation {
     private float constant;
     private float linear;

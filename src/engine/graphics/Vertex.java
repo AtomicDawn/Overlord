@@ -1,3 +1,8 @@
+package engine.graphics;
+
+import engine.util.Vector2f;
+import engine.util.Vector3f;
+
 public class Vertex {
     public static final int SIZE = 8;
 

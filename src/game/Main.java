@@ -1,3 +1,10 @@
+package game;
+
+import engine.graphics.RenderUtil;
+import engine.util.Input;
+import engine.util.Time;
+import engine.util.Window;
+
 public class Main {
     public static final int WIDTH = 800;
     public static final int HEIGHT = 600;

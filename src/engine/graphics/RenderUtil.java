@@ -1,3 +1,7 @@
+package engine.graphics;
+
+import engine.util.Vector3f;
+
 import static org.lwjgl.opengl.GL11.*;
 import static org.lwjgl.opengl.GL32.GL_DEPTH_CLAMP;
 

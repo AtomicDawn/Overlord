@@ -1,3 +1,7 @@
+package engine.graphics;
+
+import engine.util.Vector3f;
+
 public class Material {
     private Texture texture;
     private Vector3f color;
