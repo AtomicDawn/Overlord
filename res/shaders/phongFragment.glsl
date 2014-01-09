@@ -9,36 +9,36 @@ in vec3 worldPos0;
 
 out vec4 fragColor;
 
-struct engine.graphics.BaseLight
+struct BaseLight
 {
     vec3 color;
     float intensity;
 };
 
-struct engine.graphics.DirectionalLight
+struct DirectionalLight
 {
-    engine.graphics.BaseLight base;
+    BaseLight base;
     vec3 direction;
 };
 
-struct engine.graphics.Attenuation
+struct Attenuation
 {
     float constant;
     float linear;
     float exponent;
 };
 
-struct engine.graphics.PointLight
+struct PointLight
 {
-    engine.graphics.BaseLight base;
-    engine.graphics.Attenuation atten;
+    BaseLight base;
+    Attenuation atten;
     vec3 position;
     float range;
 };
 
-struct engine.graphics.SpotLight
+struct SpotLight
 {
-    engine.graphics.PointLight pointLight;
+    PointLight pointLight;
     vec3 direction;
     float cutoff;
 };
@@ -51,11 +51,11 @@ uniform sampler2D sampler;
 uniform float specularIntensity;
 uniform float specularPower;
 
-uniform engine.graphics.DirectionalLight directionalLight;
-uniform engine.graphics.PointLight pointLights[MAX_POINT_LIGHTS];
-uniform engine.graphics.SpotLight spotLights[MAX_SPOT_LIGHTS];
+uniform DirectionalLight directionalLight;
+uniform PointLight pointLights[MAX_POINT_LIGHTS];
+uniform SpotLight spotLights[MAX_SPOT_LIGHTS];
 
-vec4 calcLight(engine.graphics.BaseLight base, vec3 direction, vec3 normal)
+vec4 calcLight(BaseLight base, vec3 direction, vec3 normal)
 {
     float diffuseFactor = dot(normal, -direction);
     
@@ -81,12 +81,12 @@ vec4 calcLight(engine.graphics.BaseLight base, vec3 direction, vec3 normal)
     return diffuseColor + specularColor;
 }
 
-vec4 calcDirectionalLight(engine.graphics.DirectionalLight directionalLight, vec3 normal)
+vec4 calcDirectionalLight(DirectionalLight directionalLight, vec3 normal)
 {
     return calcLight(directionalLight.base, -directionalLight.direction, normal);
 }
 
-vec4 calcPointLight(engine.graphics.PointLight pointLight, vec3 normal)
+vec4 calcPointLight(PointLight pointLight, vec3 normal)
 {
     vec3 lightDirection = worldPos0 - pointLight.position;
     float distanceToPoint = length(lightDirection);
@@ -106,7 +106,7 @@ vec4 calcPointLight(engine.graphics.PointLight pointLight, vec3 normal)
     return color / attenuation;
 }
 
-vec4 calcSpotLight(engine.graphics.SpotLight spotLight, vec3 normal)
+vec4 calcSpotLight(SpotLight spotLight, vec3 normal)
 {
     vec3 lightDirection = normalize(worldPos0 - spotLight.pointLight.position);
     float spotFactor = dot(lightDirection, spotLight.direction);

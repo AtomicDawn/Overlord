@@ -20,7 +20,7 @@ public class Game {
             new Vector3f(0, 1f, 0f), 0.8f), new Attenuation(0, 0, 0.1f),
             new Vector3f(-2, 0, 5f), 30), new Vector3f(1, 1, 1), 0.7f);
 
-    public Game() {// engine.util.ResourceLoader.loadMesh("box.obj");
+    public Game() {
         material = new Material(ResourceLoader.getInstance().loadTexture("test.png"), new Vector3f(1, 1, 1),
                 1, 8);
         zedMat = new Material(ResourceLoader.getInstance().loadTexture("test.png"), new Vector3f(1, 1, 1),
@@ -48,7 +48,6 @@ public class Game {
         camera = new Camera();
         transform = new Transform();
         zedTrans = new Transform();
-
 
         Transform.setProjection(70f, Window.getWidth(), Window.getHeight(),
                 0.1f, 1000);
@@ -80,7 +79,7 @@ public class Game {
         pLight2.setPosition(new Vector3f(7, 0,
                 8.0f * (float) (Math.cos(temp) + 1.0 / 2.0) + 10));
 
-        // transform.setScale(0.7f * sinTemp, 0.7f * sinTemp, 0.7f * sinTemp);
+        //transform.setScale(0.7f * sinTemp, 0.7f * sinTemp, 0.7f * sinTemp);
         sLight1.getPointLight().setPosition(camera.getPos());
         sLight1.setDirection(camera.getForward());
     }

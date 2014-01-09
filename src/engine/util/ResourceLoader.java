@@ -1,5 +1,8 @@
 package engine.util;
 
+import engine.graphics.Mesh;
+import engine.graphics.Texture;
+import engine.graphics.Vertex;
 import org.newdawn.slick.opengl.TextureLoader;
 
 import java.io.BufferedReader;

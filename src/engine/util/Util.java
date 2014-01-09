@@ -1,5 +1,6 @@
 package engine.util;
 
+import engine.graphics.Vertex;
 import org.lwjgl.BufferUtils;
 
 import java.nio.FloatBuffer;

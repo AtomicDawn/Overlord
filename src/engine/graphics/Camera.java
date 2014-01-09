@@ -1,8 +1,6 @@
 package engine.graphics;
 
-import engine.util.Input;
-import engine.util.Vector2f;
-import engine.util.Vector3f;
+import engine.util.*;
 
 public class Camera {
     public static final Vector3f yAxis = new Vector3f(0, 1, 0);
